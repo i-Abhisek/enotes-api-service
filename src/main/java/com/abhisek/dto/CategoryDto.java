@@ -2,39 +2,30 @@ package com.abhisek.dto;
 
 import java.util.Date;
 
-import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class CategoryDto {
-	
+
 	private Integer id;
 
-    private String name;
+	private String name;
 
-    private String description;
-    
-    @Column(name = "is_active")
-    private Boolean isActive;
+	private String description;
 
-    @Column(name = "created_by")
-    private Integer createdBy;
+	private Boolean isActive;
 
-    @Column(name = "create_on")
-    private Date createOn;
+	private Integer createdBy;
 
-    @Column(name = "updated_by")
-    private Integer updatedBy;
+	private Date createdOn;
 
-    @Column(name = "update_on")
-    private Date updateOn;
+	private Integer updatedBy;
 
+	private Date updatedOn;
 }

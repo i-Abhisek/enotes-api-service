@@ -2,7 +2,6 @@ package com.abhisek.entity;
 
 import java.util.Date;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,22 +10,16 @@ import lombok.Setter;
 @Setter
 @MappedSuperclass
 public class BaseModel {
+	
+	private Boolean isActive;
 
-    @Column(name = "is_active")
-    private Boolean isActive;
+	private Boolean isDeleted;
 
-    @Column(name = "is_deleted")
-    private Boolean isDeleted;
+	private Integer createdBy;
 
-    @Column(name = "created_by")
-    private Integer createdBy;
+	private Date createdOn;
 
-    @Column(name = "create_on")
-    private Date createOn;
+	private Integer updatedBy;
 
-    @Column(name = "updated_by")
-    private Integer updatedBy;
-
-    @Column(name = "update_on")
-    private Date updateOn;
+	private Date updatedOn;
 }
